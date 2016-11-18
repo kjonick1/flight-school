@@ -11,4 +11,4 @@ jobs:
   - get: flight-school-repo
     trigger: true
   - task: tests
-    file: flight-school/ci/build.yml
+    file: flight-school-repo/ci/build.yml
