@@ -1,5 +1,5 @@
 resources:
-- name: flight-school-repo
+- name: flight-school
   type: git
   source:
     uri: https://github.com/kjonick1/flight-school
@@ -8,7 +8,7 @@ resources:
 jobs:
 - name: test-app
   plan:
-  - get: flight-school-repo
+  - get: flight-school
     trigger: true
   - task: tests
-    file: flight-school-repo/ci/build.yml
+    file: flight-school/ci/build.yml
